@@ -1,5 +1,7 @@
+[ -f ./settings  ] && source settings
 
-SERVER_URI='http://localhost:8000/parse/classes/GameScore'
+SERVER_URI=$SERVER_URL/parse/classes/GameScore
+
 #post update
 RESULT=`curl -X POST \
 -H "X-Parse-Application-Id: 100" \
