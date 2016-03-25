@@ -1,0 +1,7 @@
+server=$(which parse-dashboard)
+
+[ -z $server ] && npm install -g parse-dashboard
+[ -f ./settings ] && source ./settings
+
+parse-dashboard --appId $APPID --masterKey $KEY --serverURL $SERVER_URL
+
